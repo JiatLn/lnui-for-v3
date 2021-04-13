@@ -32,4 +32,6 @@ createApp(App).use(LnUI).mount('#app');
 
 - [x] 项目初始化
 - [x] switch 组件
-- [ ] 按钮组件
+- [x] 按钮组件
+- [x] 头像组件
+- [ ] 弹窗组件

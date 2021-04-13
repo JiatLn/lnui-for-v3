@@ -1,5 +1,4 @@
 <template>
-  <ln-switch v-model:checked="checked"></ln-switch>
   <router-view></router-view>
 </template>
 
@@ -10,9 +9,7 @@ export default defineComponent({
   name: 'App',
   components: {},
   data() {
-    return {
-      checked: true,
-    };
+    return {};
   },
 });
 </script>
