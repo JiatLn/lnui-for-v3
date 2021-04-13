@@ -1,31 +1,35 @@
-# Vue 3 + Typescript + Vite
+# Lnui
 
-This template should help get you started developing with Vue 3 and Typescript in Vite.
+> 基于 Vue 3.0 的桌面端组件库
 
-## Recommended IDE Setup
+## npm 安装
 
-[VSCode](https://code.visualstudio.com/) + [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur). Make sure to enable `vetur.experimental.templateInterpolationService` in settings!
+```
+npm install @jiatln/lnui -S
+```
 
-### If Using `<script setup>`
+## 引入 LnUI
 
-[`<script setup>`](https://github.com/vuejs/rfcs/pull/227) is a feature that is currently in RFC stage. To get proper IDE support for the syntax, use [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) instead of Vetur (and disable Vetur).
+### 完整引入
 
-## Type Support For `.vue` Imports in TS
+在 main.js 中写入以下内容：
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can use the following:
+```js
+import { createApp } from 'vue';
+import App from './App.vue';
 
-### If Using Volar
+import LnUI from '@jiatln/lnui';
+import '@jiatln/lnui/lib/style.css';
 
-Run `Volar: Switch TS Plugin on/off` from VSCode command palette.
+createApp(App).use(LnUI).mount('#app');
+```
 
-### If Using Vetur
+## 如何使用
 
-1. Install and add `@vuedx/typescript-plugin-vue` to the [plugins section](https://www.typescriptlang.org/tsconfig#plugins) in `tsconfig.json`
-2. Delete `src/shims-vue.d.ts` as it is no longer needed to provide module info to Typescript
-3. Open `src/main.ts` in VSCode
-4. Open the VSCode command palette
-5. Search and run "Select TypeScript version" -> "Use workspace version"
+各个组件的使用方法请参阅它们各自的文档。
 
-### 开新坑 vue3 的 ui 组件库
+### TODO
 
-- 项目初始化
+- [x] 项目初始化
+- [x] switch 组件
+- [] 按钮组件
